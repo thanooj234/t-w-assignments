@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txt"> ADD URL:</label>
+     <input type="text" id="txt" name="ADD URL" placeholder="Enter here"></input>
+    <script>
+         
+    var btn=document.createElement("button")
+    var img=document.createElement("img")
+  btn.innerText="show"
+  btn.onclick=function()
+  {
+     var url=document.getElementById("txt").value
+    img.src=url
+     img.style.width = "250px";
+            img.style.height = "350px";
+            img.style.objectFit = "cover";
+            img.style.display = "block";
+            img.style.marginTop = "10px";
+  }
+    document.body.appendChild(btn)
+  document.body.appendChild(img)
+
+ 
+    </script>
+</body>
+</html>
