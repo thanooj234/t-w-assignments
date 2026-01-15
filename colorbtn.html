@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var hello = document.createElement("button")
+        var p = document.createElement("P")
+
+
+        hello.innerText = "green"
+
+        hello.style.backgroundColor = "green"
+        hello.style.padding = "12px 24px"
+        hello.onclick = function () {
+            if (hello.style.backgroundColor === "green") {
+                hello.style.backgroundColor = "red"
+                hello.innerText = "red"
+
+            }
+            else {
+                hello.style.backgroundColor = "green"
+                hello.innerText = "green"
+            }
+        }
+        document.body.appendChild(hello)
+        document.body.appendChild(p)
+
+    </script>
+</body>
+
+</html>
