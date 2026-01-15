@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var btn=document.createElement("button")
+        p=document.createElement("p")
+        p.innerText="True"
+        btn.innerText="Toggle"
+        btn.style.padding="24px 34px"
+        btn.onclick=function()
+        {
+            if(p.innerText==="True")
+            p.innerText="False"
+        else
+        p.innerText="True"
+        }
+        document.body.appendChild(btn)
+        document.body.appendChild(p)
+    </script>
+</body>
+</html>
