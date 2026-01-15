@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        div = document.createElement("div")
+
+        div.style.width = "150px";
+        div.style.height = "150px";
+        div.style.border = "2px solid black";
+        div.style.marginBottom = "10px";
+        div.style.backgroundColor = "red";
+
+        var toggle = document.createElement("button")
+        toggle.innerText = "Toggle"
+        toggle.onclick = function () {
+            if (div.style.backgroundColor == "red")
+                div.style.backgroundColor = "white"
+            else
+                div.style.backgroundColor = "red"
+        }
+
+        document.body.appendChild(div)
+        document.body.appendChild(toggle)
+
+    </script>
+</body>
+
+</html>
