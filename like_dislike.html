@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Dislike</title>
+</head>
+
+<body>
+    <h1>Like and Dislike Button</h1>
+
+    <script>
+        i = 0
+        y = 0
+
+
+        var container = document.createElement("div")
+        container.style.display = "flex"
+        container.style.flexDirection = "column"
+        container.style.gap = "15px"
+
+        var likeRow = document.createElement("div")
+        likeRow.style.display = "flex"
+        likeRow.style.alignItems = "center"
+        likeRow.style.gap = "15px"
+
+        var div2 = document.createElement("div")
+        div2.style.width = "150px"
+        div2.style.height = "100px"
+        div2.style.backgroundColor = "green"
+        div2.style.fontSize = "30px"
+        div2.style.display = "flex"
+        div2.style.justifyContent = "center"
+        div2.style.alignItems = "center"
+        div2.innerText = "Like"
+
+
+
+        var dislikeRow = document.createElement("div")
+        dislikeRow.style.display = "flex"
+        dislikeRow.style.alignItems = "center"
+        dislikeRow.style.gap = "15px"
+
+        var div = document.createElement("div")
+        div.style.width = "150px"
+        div.style.height = "100px"
+        div.style.border = "2px solid black"
+        div.style.backgroundColor = "red"
+        div.style.fontSize = "30px"
+        div.style.display = "flex"
+        div.style.justifyContent = "center"
+        div.style.alignItems = "center"
+        div.innerText = "Dislike"
+
+        p2 = document.createElement("p")
+        p2.style.fontSize = "30px"
+        p2.innerText = 0
+
+
+        p = document.createElement("p")
+        p.style.fontSize = "30px"
+        p.innerText = 0
+
+        div.onclick = function () {
+            i++
+            p.innerText = i
+        }
+
+        div2.onclick = function () {
+            y++
+            p2.innerText = y
+        }
+
+        likeRow.appendChild(div2)
+        likeRow.appendChild(p2)
+
+        dislikeRow.appendChild(div)
+        dislikeRow.appendChild(p)
+
+        container.appendChild(likeRow)
+        container.appendChild(dislikeRow)
+
+        document.body.appendChild(container)
+    </script>
+
+</body>
+
+</html>
