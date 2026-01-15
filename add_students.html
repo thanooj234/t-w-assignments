@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt" placeholder="Enter Student Name" />
+
+
+    <script>
+
+        var ul = document.createElement("ul")
+        ul.id = "ul"
+        ul.style.fontSize = "24px";
+
+
+        var btn = document.createElement("button")
+        btn.innerText = "ADD STUDENT"
+        btn.onclick = function () {
+            var words = document.getElementById("txt").value
+            if (words) {
+                li = document.createElement("li")
+                li.innerText = words
+                li.style.color = "green"
+                ull = document.getElementById("ul")
+                ull.appendChild(li)
+                document.getElementById("txt").value = ""
+
+            }
+            else {
+                alert("Enter Student Name")
+            }
+
+        }
+        document.body.appendChild(btn)
+        document.body.appendChild(ul)
+    </script>
+
+</body>
+
+</html>
