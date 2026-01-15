@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        i = 0
+        img1 = "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?cs=srgb&dl=pexels-led-supermarket-179772-577514.jpg&fm=jpg"
+        img2 = "https://i.pinimg.com/564x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg"
+        img3 = "https://www.bing.com/th/id/OIP.UeEpgkZmivc8CGYu8AId1gHaE8?w=277&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2"
+        var prev = document.createElement("button")
+        var next = document.createElement("button")
+        next.innerText = "NEXT"
+        prev.innerText = "PREVIOUS"
+        arr = [img1, img2, img3]
+        var img = document.createElement("img")
+        img.src = arr[i]
+        img.style.width = "250px";
+        img.style.height = "350px";
+        img.style.objectFit = "cover";
+        img.style.display = "block";
+        img.style.marginTop = "10px";
+
+
+
+        next.onclick = function () {
+            i++
+
+            if (i <= arr.length - 1) {
+                img.src = arr[i]
+                img.style.width = "250px";
+                img.style.height = "350px";
+                img.style.objectFit = "cover";
+                img.style.display = "block";
+                img.style.marginTop = "10px";
+            }
+            else {
+                i = 0
+
+                img.src = arr[i]
+                img.style.width = "250px";
+                img.style.height = "350px";
+                img.style.objectFit = "cover";
+                img.style.display = "block";
+                img.style.marginTop = "10px";
+            }
+
+        }
+
+
+        prev.onclick = function () {
+            i--
+            if (i >= 0) {
+                img.src = arr[i]
+                img.style.width = "250px";
+                img.style.height = "350px";
+                img.style.objectFit = "cover";
+                img.style.display = "block";
+                img.style.marginTop = "10px";
+            }
+            else {
+                i = arr.length - 1
+                img.src = arr[i]
+                img.style.width = "250px";
+                img.style.height = "350px";
+                img.style.objectFit = "cover";
+                img.style.display = "block";
+                img.style.marginTop = "10px";
+            }
+        }
+        document.body.appendChild(img)
+        document.body.appendChild(next)
+        document.body.appendChild(prev)
+    </script>
+</body>
+
+</html>
