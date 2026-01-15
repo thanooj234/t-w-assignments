@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Toggle</title>
+</head>
+<body>
+
+<script>
+    var img = document.createElement("img");
+    var btn = document.createElement("button");
+
+    var img1 = "https://i.pinimg.com/564x/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.jpg"; // paste first image link
+    var img2 = "https://images.pexels.com/photos/577514/pexels-photo-577514.jpeg?cs=srgb&dl=pexels-led-supermarket-179772-577514.jpg&fm=jpg"; // paste second image link
+
+     img.src = img1;
+    img.style.width = "250px";
+    img.style.height = "350px";
+    img.style.objectFit = "cover";
+    img.style.display = "block";
+    img.style.marginBottom = "10px";
+
+
+    btn.innerText = "ON";
+
+    btn.onclick = function () {
+        if (btn.innerText == "ON") {
+            img.src = img2;
+            btn.innerText="OFF"
+        } 
+        else {
+            img.src = img1;
+            btn.innerText = "ON"
+           
+        }
+    };
+
+    document.body.appendChild(img);
+    document.body.appendChild(btn);
+</script>
+
+</body>
+</html>
